@@ -9,6 +9,7 @@ get_header()?>
                 </div>
             </div>
         </div>
+
     <section>
         <div class="row section-content">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -92,27 +93,69 @@ get_header()?>
                 </div>
             </div>
 
-            <div class="tab-pane fade show active" id="pills-creativity" role="tabpanel" aria-labelledby="pills-creativity-tab">
-              
-            </div>
-        </div>
-    </section>
-    <section class="contato" style="width: 100%;">
-        <h4 style="text-align: center;">Contato</h4>
-        <div class="contact" style="display: inline-flex; justify-content: center; width:100%">
-            <div class="col-md4">
-                <h6>Endereço</h6>
-                Av Trancredo neves
-            </div>
-            <div class="col-md4">
-                <h6>Ligue pra nós</h6>
-                71 3049-6562
-            </div>
-            <div class="col-md4">
-                <h6>Mande um email</h6>
-                matheus2006_dias@hotmail.com
+            <div class="tab-pane fade show" id="pills-creativity" role="tabpanel" aria-labelledby="pills-creativity-tab">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="link_consiencia active" id="v-pills-people-tab" data-toggle="pill" href="#v-pills-people" role="tab" aria-controls="v-pills-people" aria-selected="true">Moryanos e Moryanas</a>
+                            <a class="link_consiencia" id="v-pills-shortlist-tab" data-toggle="pill" href="#v-pills-shortlist" role="tab" aria-controls="v-pills-shortlist" aria-selected="false">Shortlist Morya</a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-people" role="tabpanel" aria-labelledby="v-pills-people-tab">
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="nav nav-pills profile_content  row" id="v-pills-tab" role="tablist">
+                                    <?php foreach( getProfiles() as $profile ): ?>
+                                        <a class="link_image_profile" id="v-pills-<?php echo $profile->ID ?>-tab" data-toggle="pill" href="#v-pills-<?php echo $profile->ID ?>" role="tab" aria-controls="v-pills-<?php echo $profile->ID ?>" aria-selected="true">
+                                            <img class="image_profile" src="<?= get_field('profile_imagem', $profile->ID)['url']?>" alt="">
+                                        </a>
+                                    <?php endforeach; ?>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                    <?php foreach( getProfiles() as $profile ): ?>
+                                        <div class="tab-pane fade" id="v-pills-<?php echo $profile->ID ?>" role="tabpanel" aria-labelledby="v-pills-<?php echo $profile->ID ?>-tab">
+                                            <div class="profile_informations">
+                                                <h4 class="profile_name"><?= get_field('profile_nome', $profile->ID)?></h4>
+                                                <h6 class="profile_cargo"><?= get_field('profile_cargo', $profile->ID)?></h6>
+                                            </div>   
+                                            <p class="profile_history"><?= get_field('profile_historia', $profile->ID)?></p>
+                                        </div>
+                                    <?php endforeach; ?>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-shortlist" role="tabpanel" aria-labelledby="v-pills-shortlist-tab">
+                            <?php echo do_shortcode("[Best_Wordpress_Gallery id='6']");?>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
             </div>
         </div>
     </section>
 
+
+    <section class="contato" style="width: 100%;">
+        <h6 class="title_contact" >Contatos: </h6>
+        <div class="contact row" style="display: inline-flex; justify-content: center; width:100%">
+            <div class="field_text address col-md-4">
+                <h6><i class="fas fa-map-marker-alt fa-2x"></i>Endereço</h6>
+                Av Trancredo neves
+            </div>
+            <div class="field_text call-us col-md-4">
+                <h6><i class="fas fa-phone-alt fa-2x"></i>Ligue pra nós</h6>
+                71 3049-6562
+            </div>
+            <div class="field_text send_email col-md-4">
+                <h6><i class="fas fa-at fa-2x"></i>Mande um email</h6>
+                matheus2006_dias@hotmail.com
+            </div>
+        </div>
+    </section>
+    </div>
 <?php get_footer();?>

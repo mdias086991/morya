@@ -1,5 +1,6 @@
 html, body {
     background-color: black;
+    overflow-x: hidden;
 }
 .section-content {
     display: flex;
@@ -60,7 +61,89 @@ html, body {
 .active {
     color: #A98900;
 }
-body {
-    padding-top:20px
+.image_profile {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin: 0 10px 5px 0;
 }
+.profile_content {
+    display: flex;
+    justify-content: center;
+}
+.profile_informations {
+    margin-bottom: 10px;
+}
+.profile_name {
+    font-weight: 700;
+}
+.profile_cargo,
+.profile_history {
+    color: white;
+}
+.footer {
+    width: 100%;
+    background: #636363;
+    padding: 4rem;
+}
+.title_contact {
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+.field_text {
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+}
+.field_text h6 {
+    text-transform: uppercase;
+}
+.field_text i {
+    margin-right: 0.6rem;
+    font-size: 18px !important;
+}
+footer .menu{
+    display: flex;
+    justify-content: center;
+}
+footer .menu ul{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    list-style: none;
+    font-weight: bold;
+}
+footer .menu ul li {
+    margin: 0 auto;
+    color: #A98900 ;
+}
+footer .menu ul li a {
+    color: #A98900;
+    text-decoration: none;
+}
+footer .redes-sociais {
+    display: flex;
+    justify-content: center;
+}
+footer .social_media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+footer .redes-sociais .social_media a {
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+    width: 30%;
+    transition: 0.8s color;
+}
+
+footer .redes-sociais .social_media a:hover {
+    color: #A98900;
+}
+
+
 
