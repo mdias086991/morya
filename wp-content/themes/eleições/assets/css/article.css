@@ -1,0 +1,16 @@
+#img_menu_circle {
+    width: 58px;
+    margin-bottom: 10px;
+}
+.text_article {
+    text-align: justify;
+}
+.content-article {
+    margin: 40px 0 40px 0;
+}
+.sidebar {
+    text-align: center;
+   background: #00A267;
+    color: white;
+    
+}

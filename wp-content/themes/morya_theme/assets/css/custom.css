@@ -1,0 +1,66 @@
+html, body {
+    background-color: black;
+}
+.section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-content img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    transition: .3s;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
+.section-content .active img {
+	-webkit-filter: none;	
+	filter: none;	
+}
+
+.section_images_link {
+    display: flex;
+    justify-content: center;
+}
+.text_link_images {
+    text-align: center;
+    width: 20rem;
+    margin: 0 auto;
+    color: white;
+}
+.title_section {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.text_intro_section {
+    color: white;
+}
+.consiencia_galeria {
+    display: inline-flex;
+}
+.image_galery_consiencia {
+    width: 6rem;
+    height: 8rem;
+    margin: 1rem 1rem;
+}
+
+.link_consiencia {
+    text-decoration: none;
+    color: white;
+}
+.link_consiencia:hover {
+    text-decoration: none;
+    color: #A98900;
+}
+.active {
+    color: #A98900;
+}
+body {
+    padding-top:20px
+}
+
